@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <body>
+    <input type="number" id="number1">
+    <input type="number" id="number2">
+    <button id="add">Add</button>
+    <button id="substract">Substract</button>
+    <button id="multiply">Multiply</button>
+    <button id="devide">Devide</button>
+  </body>
+  <script>
+
+    // addition
+    document.getElementById("add").addEventListener("click",addition);
+
+    
+    function addition(){
+      var num1=parseInt(document.querySelector("#number1").value);
+      var num2=parseInt(document.querySelector("#number2").value);
+
+    var add1=(num1+num2)
+    alert(add1);
+    }
+
+    // substarction
+    document.getElementById("substract").addEventListener("click",sub);
+   
+
+    function sub(){
+    var num1=parseInt(document.querySelector("#number1").value);
+    var num2=parseInt(document.querySelector("#number2").value);
+    var sub1=(num1-num2)
+    alert(sub1);
+    }
+
+    // mutipication
+    document.getElementById("multiply").addEventListener("click",muti1);
+   
+
+   function muti1(){
+   var num1=parseInt(document.querySelector("#number1").value);
+   var num2=parseInt(document.querySelector("#number2").value);
+   var mutipal2=(num1*num2)
+   alert(mutipal2);
+   }
+
+   document.getElementById("devide").addEventListener("click",dive1);
+   
+
+   function dive1(){
+   var num1=parseInt(document.querySelector("#number1").value);
+   var num2=parseInt(document.querySelector("#number2").value);
+   var devidd2=(num1/num2)
+   alert(devidd2);
+   }
+
+  </script>
+</html>
