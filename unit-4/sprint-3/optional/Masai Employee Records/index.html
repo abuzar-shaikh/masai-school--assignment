@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Employee Records</title>
+  </head>
+  <style>
+    body{
+      display: flex;
+      justify-content: space-around;
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border: 1px solid;
+      width: 30%;
+      padding: 20px;
+    }
+    body div{
+      border: 1px solid ;
+      display: flex;
+      flex-direction: column;
+      gap:30px;
+      width: 60%;
+      padding: 20px;
+    }
+    table,tr,th,td{
+      border: 1px solid;
+    }
+  </style>
+  <body>
+    <!-- Use this form for taking the inputs  -->
+    <form>
+      <input placeholder="Name" type="text" id="name" />
+      <input placeholder="Employee ID" type="text" id="employee_id" />
+      <select id="department">
+        <option value="">Select Department</option>
+        <option value="HR">HR</option>
+        <option value="Finance">Finance</option>
+        <option value="Engineering">Engineering</option>
+      </select>
+      <input placeholder="Experience" type="number" id="experience" />
+      <input placeholder="Email" type="email" id="email" />
+      <input placeholder="Mobile No." type="number" id="mobile" />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div>
+<!-- Use this select tag for filtering  -->
+<select id="filter">
+  <option value="">Select Department</option>
+  <option value="HR">HR</option>
+  <option value="Finance">Finance</option>
+  <option value="Engineering">Engineering</option>
+</select>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Employee ID</th>
+      <th>Department</th>
+      <th>Experience in Years</th>
+      <th>Email</th>
+      <th>Mobile No</th>
+      <th>Role</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Append Rows here using JS & DOM  -->
+  </tbody>
+</table>
+    </div>
+  </body>
+
+
+
+
+  <script>
+document.querySelector("form").addEventListener("submit",callfun);
+
+function callfun(){
+  event.preventDefault();
+  
+var name1=document.getElementById("name").value;
+var employee_id1=document.getElementById("employee_id").value;
+var department1=document.getElementById("department").value;
+var experience1=document.getElementById("experience").value;
+var email1=document.getElementById("email").value;
+var mobile1=document.getElementById("mobile").value;
+
+
+var tr=document.createElement("tr")
+
+var td1=document.createElement("td");
+td1.textContent=name1
+
+var td2=document.createElement("td");
+td2.textContent=employee_id1
+
+var td3=document.createElement("td");
+td3.textContent=department1
+
+var td4=document.createElement("td");
+td4.textContent=experience1
+
+var td5=document.createElement("td");
+td5.textContent=email1
+
+var td6=document.createElement("td");
+td6.textContent=mobile1
+
+var td7=document.createElement("td");
+if(experience1>5){
+  td7.textContent="Senior";
+}
+else if(experience1>=2 && experience1<=5){
+  td7.textContent="Junior";
+}
+else{
+  td7.textContent="Fresher";
+}
+
+
+var td8=document.createElement("td");
+td8.textContent="delete";
+td8.addEventListener("click",fundelete)
+
+tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
+document.querySelector("tbody").append(tr);
+
+}
+
+function fundelete(){
+  event.target.parentNode.remove();
+}
+
+  </script>
+</html>
