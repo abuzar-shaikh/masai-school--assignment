@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="number" placeholder="enter age" id="age"/> 
+   <button id="sub">submit</button>
+   <p id="old"></p>
+   <script>
+    document.getElementById("sub").addEventListener("click",subfun);
+    function subfun(){
+        var ab=document.getElementById("age").value;
+        var old=document.getElementById("old");
+
+        if(ab>18){
+        old.textContent="you can drive in India!";
+        }
+        else if(ab<18){
+            old.textContent="You can't drive in India";
+        }
+        else if(ab=18){
+            old.textContent="You are just old enough to drive in India!"; 
+        }
+    }
+   </script>
+</body>
+</html>
+<!-- <script></script> -->
