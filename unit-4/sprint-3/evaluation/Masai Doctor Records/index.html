@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Masai Doctor Records</title>
+  </head>
+  <style>
+   
+  #parent{
+      /* border: 1px solid ; */
+          display: flex;
+          gap:30px;
+          height: 500px;
+          padding: 20px;
+          
+    }
+    
+#chail1{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 30%;
+      padding:20px;
+      height: 520px;
+     justify-content: center;
+     padding-left: 50px;
+     
+}
+#chaild2{
+ 
+
+      display: flex;
+      flex-direction: column;
+      gap:30px;
+      width: 60%;
+      padding: 20px;
+     
+}
+input{
+ 
+  width: 350px;
+  height: 30px;
+  font-size: 15px;
+ margin: -10px;
+ border-radius: 5px;
+
+
+}
+select{
+  width: 360px;
+  height: 40px;
+  font-size: 15px;
+ margin: -10px;
+ border-radius: 5px;
+}
+
+
+H1{
+  text-align: center;
+  text-decoration-line: underline;
+  color: blue;
+ 
+}
+
+
+
+table,tr,th,td{
+      border: 1px solid ;
+      border-collapse: collapse;
+      text-align: center;
+      height: 40px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+    }
+    
+    #but{
+      color:white;
+      background-color:#2b619e;
+      border-radius: 5px;
+      border: none;
+      margin-top: 30px;
+      height: 40px;
+      
+    }
+
+    #trt{
+      background-color: #2b619e;
+      color: white;
+      border-collapse: collapse;
+      height: 40px;
+    }
+
+
+  </style>
+  <body>
+    <h1>HOSPITAL - DOCTOR RECORDS</h1>
+
+<div id="parent">
+ <!-- Use this form for data input  -->
+ <div id="chail1">
+  <form>
+    <h3>Doctor Name</h3>
+     <input placeholder="Name" type="text" id="name" />
+     <h3>Doctor ID</h3>
+     <input placeholder="Doctor ID" type="text" id="doctor_id" />
+     <h3>specialization</h3>
+     <select id="specialization">
+       <option value="">Select Specialization</option>
+       <option value="Dermatologist">Dermatologist</option>
+       <option value="Dentist">Dentist</option>
+       <option value="Gynecologist">Gynecologist</option>
+     </select>
+     <h3>Experience</h3>
+     <input placeholder="Experience" type="number" id="experience" />
+     <h3>Email Address</h3>
+     <input placeholder="Email" type="email" id="email" />
+     <h3>Mobile Number</h3>
+     <input placeholder="Mobile No." type="number" id="mobile" />
+    
+     <input id="but" type="submit" value="Submit" />
+   </form>
+
+ </div>
+ 
+
+ <div id="chaild2">
+<!-- Use this Select tag for filter part  -->
+<select id="filter">
+<option value="">Select Specialization</option>
+<option value="Dermatologist">Dermatologist</option>
+<option value="Dentist">Dentist</option>
+<option value="Gynecologist">Gynecologist</option>
+</select>
+<table>
+<thead>
+ <tr id="trt">
+   <th>Name</th>
+   <th>Doctor ID</th>
+   <th>Specialization</th>
+   <th>Experience in Years</th>
+   <th>Email</th>
+   <th>Mobile No</th>
+   <th>Role</th>
+   <th>
+    Delete 
+  </th>
+ </tr>
+</thead>
+<tbody>
+ <!-- Append Rows here using JS & DOM  -->
+</tbody>
+</table>
+</div>
+
+</div> 
+  </body>
+  
+  <script>
+document.querySelector("form").addEventListener("submit",callform);
+function callform(){
+  event.preventDefault();
+
+var name1=document.getElementById("name").value;
+var doctor_id1=document.getElementById("doctor_id").value;
+var specialization1=document.getElementById("specialization").value;
+var experience1=document.getElementById("experience").value;
+var email1=document.getElementById("email").value;
+var mobile1=document.getElementById("mobile").value;
+
+var tr=document.createElement("tr")
+
+var td1=document.createElement("td")
+td1.textContent=name1
+
+var td2=document.createElement("td")
+td2.textContent=doctor_id1
+
+var td3=document.createElement("td")
+td3.textContent=specialization1
+
+var td4=document.createElement("td")
+td4.textContent=experience1
+
+var td5=document.createElement("td")
+td5.textContent=email1
+
+var td6=document.createElement("td")
+td6.textContent=mobile1
+
+var td7=document.createElement("td")
+if(experience1>5){
+  td7.textContent="Senior";
+}
+else if(experience1>=2 && experience1<=5){
+  td7.textContent="Junior";
+}
+else{
+  td7.textContent="Trainee";
+}
+
+
+var td8=document.createElement("td")
+td8.textContent="delete";
+td8.addEventListener("click",deleterow)
+
+tr.append(td1,td2,td3,td4,td5,td6,td7,td8);
+document.querySelector("tbody").append(tr);
+
+}
+function deleterow(){
+  event.target.parentNode.remove();
+}
+
+
+
+  </script>
+</html>
