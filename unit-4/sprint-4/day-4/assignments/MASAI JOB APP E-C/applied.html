@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+<select id="Sortnames" onchange="handalNameSort()">
+  <option>Sort by names</option>
+  <option value="ascending">ascending</option>
+  <option value="descending">descending</option>
+</select>
+
+<select id="SortSalary" onchange="handalSalarySort()">
+  <option value="">Sort by Salary</option>
+<option value="HTL">High to Low</option>
+<option value="LTH">Low to High</option>
+</select>
+
+<select id="FilterRole" onchange="handalRolfilter()">
+  <option value="">Filter by Role</option>
+  <option value="FSD">FSD</option>
+  <option value="Frontend">Frontend</option>
+  <option value="Backend">Backend</option>
+</select>
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Salary expected</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+  <script>
+    //you need to code here
+var appliedjobs=JSON.parse(localStorage.getItem("jobList"))||[];
+
+displayjobs(appliedjobs);
+// filter for salary
+function handalSalarySort(){
+  var selectedsalary=document.getElementById("SortSalary").value;
+  // DECENDING
+  if(selectedsalary==="HTL"){
+    appliedjobs=appliedjobs.sort(function(a,b){
+      return b.salary-a.salary;
+    });
+}
+// ASENDING
+if(selectedsalary==="LTH"){
+    appliedjobs=appliedjobs.sort(function(a,b){
+      return a.salary-b.salary;
+    });
+}
+displayjobs(appliedjobs);
+}
+// filter name
+function handalNameSort(){
+  var selectedname=document.getElementById("Sortnames").value;
+  // for ascending
+  if(selectedname==="ascending"){
+    appliedjobs=appliedjobs.sort(function(a,b){
+      if(a.name>b.name) return 1;
+      if(a.name<b.name) return -1;
+      return 0;
+    });
+ 
+  }
+// for decending
+if(selectedname==="descending"){
+    appliedjobs=appliedjobs.sort(function(a,b){
+      if(a.name>b.name) return -1;
+      if(a.name<b.name) return 1;
+      return 0;
+    });
+    
+}
+displayjobs(appliedjobs)
+}
+
+// filter role
+function handalRolfilter(){
+  var selectedRol=document.getElementById("FilterRole").value;
+  // console.log(selectedRol)
+
+var filterjob=appliedjobs.filter(function(elem){
+  if(selectedRol===""){
+   return 1;
+  }
+  else{
+    return elem.role===selectedRol;
+  }
+    
+});
+displayjobs(filterjob)
+console.log(filterjob)
+}
+
+function displayjobs(elem){
+  document.querySelector("#body").textContent="";
+  elem.map(function(elem){
+    var tr=document.createElement("tr");
+
+    var td1=document.createElement("td");
+    td1.textContent=elem.name;
+
+    var td2=document.createElement("td");
+    td2.textContent=elem.email;
+
+    var td3=document.createElement("td");
+    td3.textContent=elem.role;
+
+    var td4=document.createElement("td");
+    td4.textContent=elem.salary+" LPA";
+
+    var td5=document.createElement("td");
+    td5.textContent="Bookmark";
+
+    td5.addEventListener("click",function(){
+    addToBookmark(elem);
+    });
+
+    tr.append(td1,td2,td3,td4,td5);
+    document.querySelector("#body").append(tr);
+
+  });
+}
+
+var bookmarsarr=JSON.parse(localStorage.getItem("bookmarks")) || [];
+
+function addToBookmark(elem){
+  bookmarsarr.push(elem);
+  localStorage.setItem("bookmarks",JSON.stringify(bookmarsarr));
+}
+
+  </script>
+</html>
