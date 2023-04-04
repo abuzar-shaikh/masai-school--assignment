@@ -1,0 +1,73 @@
+#main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 80%;
+    margin: auto;
+  }
+  .image {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+  }
+
+  #btn,
+  #btn1 {
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 10px 15px;
+    display: block;
+    width: 250px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px;
+    font-size: 26px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(246, 217, 33);
+    color: #232222;
+    font-weight: bolder;
+  }
+  #btn:hover,
+  #btn1:hover {
+    background-color: rgb(232, 118, 90);
+  }
+
+  input {
+    /* padding: 10px; */
+    margin-right: 20px;
+  }
+  h1 {
+    text-align: center;
+    color: #232222;
+    margin: auto;
+    margin-top: 30px;
+  }
+  #food {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 30px;
+    width: 80%;
+    margin: auto;
+  }
+  .miniBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .miniBox > b {
+    margin-bottom: 5px;
+    /* background-color:rgb(241, 143, 110); */
+    border-radius: 5px;
+    padding: 3px;
+    color: #232222;
+    font-size: 20px;
+  }
