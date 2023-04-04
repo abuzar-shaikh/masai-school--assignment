@@ -1,0 +1,123 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* <!-- -----navbaar start----------- --> */
+nav{
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    justify-content: space-between;
+    color: black;
+   font-weight: bold;
+   font-size: large;
+}
+li a:hover{
+   color: red;
+}
+
+li{
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;;
+}
+
+/* <!-- -----navbaar end----------- --> */
+
+/* movie list */
+
+
+#movies{
+    /* border: 5px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+    /* width: 100%; */
+    /* margin-top: 30px;     */
+}
+
+#imagediv{
+    /* border: 5px solid green; */
+    height: 500px;
+}
+
+#imagediv>img{
+ width: 100%;
+ height: 500px;
+ border-top-right-radius: 5px;
+ border-top-left-radius: 5px;
+}
+
+#boxdiv{
+    /* border: 5px solid yellow;    */
+    margin: auto;
+    text-align: center;
+}
+
+#main{
+    /* border: 5px solid black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset; 
+   border-radius: 5px;
+}
+
+/* select button css */
+
+#sort-buttons{
+   /* border: 5px solid yellow;    */
+   display: flex;
+   align-items: center;
+   justify-content: center;  
+   /* padding: 20px; */
+}
+
+#select{
+ /* border: 5px solid green;    */
+ width: 50%;
+ height: 50px;
+border-radius: 10px;
+background-color: rgb(241, 232, 243);
+font-size: large;
+margin: 50px;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+}
+
+
+/* slid imag */
+
+#slideshow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+  
+}
+#slide{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 100%;
+    height: 70vh;
+    background-repeat: no-repeat ;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+

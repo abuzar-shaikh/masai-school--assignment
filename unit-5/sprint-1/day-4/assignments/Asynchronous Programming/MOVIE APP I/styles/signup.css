@@ -1,0 +1,89 @@
+/* body{
+    margin: 0px;
+    padding: 0px;
+} */
+
+/* <!-- -----navbaar start----------- --> */
+nav{
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-end;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    text-decoration: none;
+    justify-content: space-between;
+    color: black;
+   font-weight: bold;
+   font-size: large;
+}
+li a:hover{
+   color: red;
+}
+
+li{
+    float: left;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    /* transition-duration: 0.5s; */
+}
+
+/* <!-- -----navbaar end----------- --> */
+
+#signup-form-div{
+   border-radius: 10px;
+   width: 30%;
+   margin: auto;
+   margin-top: 60px;
+   padding: 40px;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#signup-form-div>form{ 
+display: grid;
+grid-template-columns: repeat(1,1fr);
+/* width: 50%; */
+margin: auto;
+gap: 30px;
+font-size: large;
+justify-content: center;
+align-items: center;
+}
+
+#signup-form-div>form>input{
+    padding: 13px;
+    font-size: large;
+    border-radius: 5px;
+    width: 70%;
+    margin: auto;
+}
+
+#signup-form-div>form>button{
+    padding: 10px 10px;
+    font-size: large;
+    border-radius: 5px;
+    border: none;
+    background-color:#008080;
+    color: white;
+    width: 50%;
+    margin: auto;
+}
+
+#signup-form-div>h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 50px;
+    margin-top: -30px;
+}
+/* -----------signup-form-div END--------- */
