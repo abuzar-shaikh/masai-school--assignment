@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>admin</title>
+    <style>
+
+form{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    width: 30%;
+    margin: auto;
+    margin-top: 10%;
+    gap: 10px;
+    font-size: large;
+}
+
+input{
+    padding: 5px;
+    border-color: black;
+}
+
+select{
+    padding: 5px;
+    border-color: black;
+}
+button{
+    padding: 5px;
+    border-color: black;
+
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>Enter a Product Name</label>
+      <input id="name" type="text" placeholder="Enter a Product Name" />
+
+      <label>Enter a Category</label>
+      <input id="Category" type="text" placeholder="Enter a Category" />
+
+      <label>Enter a Image URL</label>
+      <input type="text" id="image" placeholder="Enter a Image url" />
+
+      <label>Enter a Price</label>
+      <input type="text" id="price" placeholder="Enter a Price" />
+
+      <label>Select Gender</label>
+      <select id="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+
+      <button type="button" id="sold" value="false">Sold</button>
+      <input id="add" value="submit" type="submit" name="submit" />
+    </form>
+  </body>
+
+  <script>
+function details(name,category,image,price, gender,sold){
+    this.productName=name;
+    this.Category=category;
+    this.image_url=image;
+    this.price= "₹" + price;
+    this.gender=gender;
+    this.sold=false;
+  
+}
+
+document.querySelector("form").addEventListener("submit",Datafun);
+DataArr=JSON.parse(localStorage.getItem("products"))||[];
+
+function Datafun(){
+    event.preventDefault();
+
+    let name=document.getElementById("name").value;
+    let Category=document.getElementById("Category").value;
+    let image=document.getElementById("image").value;
+    let price=document.getElementById("price").value;
+    let gender=document.getElementById("gender").value;
+
+
+
+let ProductDeatils=new details(name,Category,image,price,gender);
+DataArr.push(ProductDeatils);
+
+localStorage.setItem("products",JSON.stringify(DataArr));
+
+    document.getElementById("name").value="";
+    document.getElementById("Category").value="";
+    image=document.getElementById("image").value="";
+    price=document.getElementById("price").value="";
+    gender=document.getElementById("gender").value="";
+}
+
+  </script>
+</html>
