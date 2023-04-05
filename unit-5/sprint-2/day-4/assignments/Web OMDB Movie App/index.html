@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Movie App</title>
+    <style>
+      /* Write necessery styles here  */
+      #serach{
+        /* margin: auto; */
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+      }
+      #search-inp{
+        margin-right: 10px;
+        text-align: left;
+        padding: 8px 40px;
+        width: 50%;
+        border-radius: 10px;
+        font-size: large;
+      }
+      #search-btn{
+        background-color: rgb(226, 82, 82);
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 10px;
+      }
+      #movie_container{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 50px;
+        margin: auto;
+        width: 80%;
+      }
+      #main{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        text-align: center;
+        width: 100%;
+      }
+      .poster{
+        width: 100%;
+        height: 300px;
+      }
+      #heding{
+        /* border: 1px solid red; */
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(168, 75, 132);
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="heding"><h1>Movies APP</h1></div>
+    <div id="serach">
+      <input type="text"  id="search-inp" placeholder="Search........"/>
+      <button id="search-btn" >Search</button>
+    </div>
+    <div id="movie_container"></div>
+  </body>
+
+  <script>
+    // Write necessery JS here
+    document.getElementById("search-btn").addEventListener("click",handaldata)
+
+    let search=document.getElementById("search-inp");
+    let container=document.getElementById("movie_container");
+    
+
+
+    async function handaldata(){
+      try{
+        let query=search.value;
+        let response=await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=fa26c4f6&s=${query}`);
+        console.log(response)
+        let data=await response.json();
+        console.log(data)
+        let movie=data.Search;
+        
+        displaydata(movie);
+       }catch{(error)=>console.log(error)}
+    }
+
+    window.onload=async()=>{
+      try{
+        let query="movies";
+        let response=await fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=fa26c4f6&s=${query}`);
+        console.log(response)
+        let data=await response.json();
+        console.log(data)
+        let movie=data.Search;
+        
+        displaydata(movie);
+       }catch{(error)=>console.log(error)}
+    }
+
+    
+
+
+    function displaydata(movie){
+      try{
+        container.innerHTML="";
+      let newinnerHTML="";
+
+      movie.forEach(function(item){
+        newinnerHTML+=`<div id="main"> <img src="${item.Poster}" class="poster"/>
+          <h2 class="title">${item.Title}</h2>  </div> `;
+
+          container.innerHTML=newinnerHTML;
+      })
+      }catch{
+        (error)=>{console.log(error);}
+    container.innerHTML=`<h2 class="error-container">Movie not found!</h2>`;
+      }
+
+    }
+ </script>
+</html>
