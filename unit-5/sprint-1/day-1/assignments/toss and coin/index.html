@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>toss and coin</h1>
+</body>
+<script>
+function ganaret1or2(){
+    return Math.ceil(Math.random()*2)
+}
+
+let CoinToss= new Promise(function(resolve,reject){
+
+setTimeout(()=>{
+    let number=ganaret1or2();
+
+    if(number===1){
+        resolve(`head`)
+    }else{
+        reject(`tail`)
+    }
+},2000)
+
+})
+
+CoinToss.then(function(resolve){
+console.log(resolve)
+}).catch(function(reject){
+    console.log(reject)
+}).finally(function(){
+    console.log(`toss completed`)
+})
+
+
+
+
+
+</script>
+</html>
