@@ -39,16 +39,37 @@ body{
 
 let users=[];
 
-fetch(`https://reqres.in/api/users?page=2`).then(function(response){
-    return response.json()
-}).then(function(response){
-users=response.data
-// console.log(response)
-// console.log(users)
-displayuserData()
-}).catch(function(error){
-    console.log(error)
-})
+// method 1
+
+// fetch(`https://reqres.in/api/users?page=2`).then(function(response){
+//     return response.json()
+// }).then(function(response){
+// users=response.data
+// // console.log(response)
+// // console.log(users)
+// displayuserData()
+// }).catch(function(error){
+//     console.log(error)
+// })
+
+// method 2
+
+async function handalresponce(){
+
+try{
+    let response=await fetch(`https://reqres.in/api/users?page=2`)
+    let responseData=await response.json()
+    users=responseData.data 
+    displayuserData()
+} catch(err){
+    console.log(err)
+}
+
+}
+
+handalresponce()
+
+// .............................
 
 
 function displayuserData(){
