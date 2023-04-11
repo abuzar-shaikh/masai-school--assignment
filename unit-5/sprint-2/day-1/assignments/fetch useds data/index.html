@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fetch users</title>
+    <style>
+body{
+    text-align: center;
+}
+#main-contener{
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid red; */
+    width: 100%;
+   
+}
+
+#userCardDiv{
+    /* border: 3px solid green;  */
+    margin: 20px 20px 20px 20px;
+    width: 150px;
+    /* width: 100%; */
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#userCardDiv img{
+     width: 100%;
+    height: 150px;
+}
+    </style>
+</head>
+<body>
+    <h1>Users</h1>
+    <div id="main-contener"></div>
+</body>
+<script>
+
+let users=[];
+
+fetch(`https://reqres.in/api/users?page=2`).then(function(response){
+    return response.json()
+}).then(function(response){
+users=response.data
+// console.log(response)
+// console.log(users)
+displayuserData()
+}).catch(function(error){
+    console.log(error)
+})
+
+
+function displayuserData(){
+let maincontener=document.getElementById("main-contener")
+
+// console.log(users)
+
+users.forEach(function(user){
+    
+    let userCard=document.createElement("div");
+    userCard.setAttribute("id","userCardDiv")
+    
+    let userImg=document.createElement("img")
+    userImg.src=user.avatar;
+    userImg.alt=`userimg`;
+
+    let userName=document.createElement("h3")
+    userName.innerText=user.first_name+" "+user.last_name;
+
+    let userEmail=document.createElement("h5")
+    userEmail.innerText=user.email;
+
+    // appending....
+
+    userCard.append(userImg,userName,userEmail);
+
+    maincontener.append(userCard);
+
+})
+}
+
+   
+</script>
+</html>
