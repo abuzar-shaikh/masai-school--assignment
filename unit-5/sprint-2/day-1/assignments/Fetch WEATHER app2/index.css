@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1e8e8;
+    height: 35px;
+    align-items: center;
+    padding: 40px;
+    
+}
+.Search-btn-div{
+  /* border: 3px solid green;  */
+  width: 60%; 
+  
+ 
+}
+.Search-btn-div input{
+    width: 80%;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px 0px 0px 5px;
+    border: none;
+}
+.Search-btn-div button{
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 0px 5px 5px 0px;
+    margin-left: -6px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.left-btnDiv{
+  /* border: 1px solid blue;  */
+ 
+  width: 40%; 
+  
+}
+.left-btnDiv button{
+    border-radius: 5px;
+    padding: 10px;
+    background-color:#ececed;
+    border: none;
+    font-size: 15px;
+    margin: 15px;
+}
+#Metric-btn{
+   border-radius: 5px;
+    padding: 10px;
+    background-color:white;
+    border: none;
+    font-size: 15px;
+    margin: 15px; 
+}
+
+
+/* <!-- nav baar end..... -->/ */
+
+#js-result-min{
+    /* border: 3px solid red; */
+    display: flex;
+}
+
+#js-result-left{
+    /* border: 3px solid green; */
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 40%;
+    height: 400px;
+    text-align: left;
+    padding: 25px;
+}
+
+#js-result-Right{
+    /* border: 3px solid yellow; */
+    width: 60%; 
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+
+#DivMini{
+    /* border: 3px solid black; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    width: 100%;
+  margin-top: 20px;
+  font-size: 22px;
+}
+#feelID{
+    font-size: 25px;
+}
