@@ -1,0 +1,180 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+nav {
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 13% 10px 13%;
+  width: 100%;
+  font-size: 16px;
+  /* background-color: #f9f9fa; */
+  border: 1px solid #c4d3db;
+}
+
+.nav-Img-logo img {
+  width: 100px;
+  height: 32px;
+  vertical-align: middle;
+  /* border: 2px solid red; */
+}
+.nav-Favorites-icon a {
+  display: flex;
+  gap: 10px;
+}
+.nav-Favorites-icon a svg {
+  width: 22px;
+  height: 22px;
+}
+
+#nav-left-option {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+/* .dropdown{
+  border: 2px solid red;
+  
+} */
+.dropdown-menu {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#nav-menuBTN {
+  border: none;
+  background-color: #f9f9fa;
+  color: black;
+}
+.form-select {
+  background-color: #f9f9fa;
+  border: none;
+  width: 60%;
+}
+.form-select option {
+  background-color: white;
+  /* width: 100px; */
+}
+#nav-Deals-from {
+  padding: 35px 13% 35px 13%;
+  background-color: #f9f9fa;
+}
+#nav-Deals-from b {
+  font-size: 28px;
+}
+#nav-Deals-from p {
+  font-size: 16px;
+  margin: 12px 0px 0px;
+}
+#deals-1 {
+  color: #007cc2;
+}
+
+#nav-trip-oyo-booking {
+  display: flex;
+  /* align-items: center;
+    justify-content: center; */
+  justify-content: space-around;
+  padding: 35px 13% 35px 11%;
+  font-size: 12px;
+  background-color: #f9f9fa;
+}
+
+#nav-trip-oyo-booking img {
+  height: 16px;
+}
+#nav-btn-house-Apartment {
+  /* border: 2px solid red; */
+  width: 75%;
+  margin: auto;
+}
+#nav-btn-house-Apartment button {
+  border: none;
+  padding: 5px 15px;
+  font-weight: 400;
+  font-size: 14px;
+  background-color: rgb(234, 240, 243);
+  border-radius: 8px 8px 0px 0px;
+  padding: 5px 15px;
+  margin-right: 4px;
+}
+#nav-btn-house-Apartment button:focus {
+  color: #007cc2;
+  background-color: white;
+  border-bottom: 2px solid white;
+  font-weight: 600;
+}
+#nav-input-main {
+  /* border: 2px solid red; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+  width: 75%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+#nav-input-main-1 {
+  display: flex;
+  align-items: center;
+  /* border: 2px solid green; */
+  width: 30%;
+  border-radius: 10px;
+  border-radius: 15px 0px 0px 15px;
+}
+
+#nav-input-main-1 input {
+  padding: 10px;
+  border: none;
+}
+
+#searchLogo {
+  width: 20px;
+  height: 20px;
+}
+#nav-input-main-1 button {
+  background-color: white;
+  border: none;
+}
+#nav-input-main-2 {
+  /* display: flex; */
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+  /* border: 2px solid blue; */
+  width: 30%;
+  border-radius: 10px;
+  /* padding: 50px 0px 0px 0px; */
+}
+#calender1 {
+  width: 20px;
+  height: 20px;
+}
+#nav-input-main-3 {
+  /* border: 2px solid rgb(68, 68, 7); */
+  width: 30%;
+  /* border-radius: 10px; */
+  margin: auto;
+}
+
+#nav-input-main-4 {
+  /* border: 1px solid blue; */
+}
+#searchButton5 {
+  padding: 17px 30px;
+  font-weight: bold;
+  background-color: #007cc2;
+  color: white;
+  border-radius: 0px 15px 15px 0px;
+}
