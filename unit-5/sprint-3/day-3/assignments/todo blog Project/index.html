@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Todo Project</title>
+  </head>
+  <body>
+    <div id="todo-main">
+      <div id="todo-input-contener">
+        <input
+          type="text"
+          placeholder="inter todo items....."
+          id="todo-input"
+        />
+        <button id="add-todo-btn" onclick="addTodo()">ADD TODO</button>
+      </div>
+
+      <div id="todo-contenar">
+        <ul id="todo-contenar-ul"></ul>
+      </div>
+      <!-- delete -->
+      <input
+        type="text"
+        placeholder="inter todo Id to delete....."
+        id="todo-delete-input"
+      />
+      <button id="delete-todo-btn" onclick="deleteTodo()">Delete todo</button>
+
+      <!-- update -->
+      <br /><br />
+
+      <input
+        type="number"
+        placeholder="Enter todo id to update"
+        id="todo-update-id-input"
+      />
+      <input
+        type="text"
+        placeholder="Enter todo task to update"
+        id="todo-update-task-input"
+      />
+      <button id="update-todo-btn" onclick="updateTodo()">Update todo</button>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

@@ -1,0 +1,37 @@
+#todo-input-contener {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+#todo-input-contener input,
+button {
+  font-size: 20px;
+  padding: 10px;
+  /* border-radius: 5px; */
+  /* border: none; */
+  outline: none;
+}
+#todo-input-contener button {
+  background-color: rgb(236, 148, 148);
+  color: white;
+}
+#todo-input-contener button:hover {
+  background-color: rgb(226, 100, 100);
+}
+#todo-contenar {
+  /* border: 2px solid red; */
+  margin: 10px;
+}
+#todo-contenar ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  /* border: 1px solid green; */
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgb(121, 255, 255);
+}

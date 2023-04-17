@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "task": "abuzar shaikh",
+      "id": 1
+    },
+    {
+      "task": "saeed sheikh ",
+      "id": 2
+    },
+    {
+      "task": "mahevish",
+      "id": 3
+    },
+    {
+      "task": "adiba",
+      "id": 4
+    },
+    {
+      "task": "shaheda",
+      "id": 5
+    },
+    {
+      "task": "shakil",
+      "id": 6
+    }
+  ]
+}
