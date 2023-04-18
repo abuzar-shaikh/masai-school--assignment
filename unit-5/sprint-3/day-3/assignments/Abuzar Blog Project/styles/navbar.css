@@ -1,0 +1,17 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+#nav-main {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px 0px 20px;
+  font-size: 25px;
+  background-color: rgb(207, 123, 123);
+  margin-bottom: 20px;
+}
+#nav-main a {
+  text-decoration: none;
+  color: white;
+}

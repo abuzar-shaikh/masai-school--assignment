@@ -1,0 +1,17 @@
+#main-content {
+  /* border: 1px solid red; */
+  padding: 20px;
+  width: 80%;
+  margin: auto;
+  font-size: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+#heding {
+  color: rgb(230, 111, 111);
+  font-size: 30px;
+  font-weight: bolder;
+}
+#authorName {
+  font-size: 30px;
+  font-weight: bolder;
+}
