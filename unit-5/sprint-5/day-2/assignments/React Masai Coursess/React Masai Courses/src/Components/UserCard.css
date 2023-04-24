@@ -1,0 +1,41 @@
+#hedingtag {
+  /* border: 1px solid red; */
+  color: teal;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+#imgtag {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+#main-div {
+  display: flex;
+  border: 1px solid black;
+  width: 70%;
+  gap: 100px;
+  padding: 50px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+#post-followers {
+  display: flex;
+  gap: 20px;
+}
+#button-div button {
+  background-color: #efefef;
+  color: black;
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  font-weight: bolder;
+  font-size: large;
+}
+#button-div {
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
