@@ -1,0 +1,12 @@
+#coffeeCard-mainDiv img {
+  width: 250px;
+  height: 300px;
+}
+#coffeeCard-mainDiv {
+  border: 1px solid gray;
+  display: flex;
+  padding: 10px;
+}
+#coffeeCard-textData {
+  padding: 10px;
+}
