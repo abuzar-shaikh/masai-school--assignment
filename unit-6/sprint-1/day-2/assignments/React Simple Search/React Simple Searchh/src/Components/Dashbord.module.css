@@ -1,0 +1,27 @@
+.abc {
+  box-shadow: 0 0 10px pink;
+  width: 100%;
+  height: 100px;
+  margin: 10px auto;
+  background-color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+#grocery {
+  background-color: #f9e1e4;
+  padding: 100px;
+}
+
+#grocery > input {
+  padding: 20px;
+  width: 40%;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+#listData {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+}
