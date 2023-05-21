@@ -1,0 +1,27 @@
+.box {
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 0 10px black;
+}
+#mainBox {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 20px;
+  @media (max-width: 767px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 400px) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+#linkNav {
+  text-decoration: none;
+  margin: 1%;
+}
+#linkNavMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
