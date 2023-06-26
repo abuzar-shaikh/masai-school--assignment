@@ -2,9 +2,15 @@
 
 import { ADD, REDUCE, CHANGE_THEME } from "./actionTypes";
 
-const handleAdd = () => {};
+const handleAdd = (payload) => {
+  return { type: ADD, payload: payload };
+};
 
-const handleReduce = () => {};
-const handleTheme = () => {};
+const handleReduce = (payload) => {
+  return { type: REDUCE, payload: payload };
+};
+const handleTheme = (payload) => {
+  return { type: CHANGE_THEME, payload: payload };
+};
 
 export { handleAdd, handleReduce, handleTheme };
