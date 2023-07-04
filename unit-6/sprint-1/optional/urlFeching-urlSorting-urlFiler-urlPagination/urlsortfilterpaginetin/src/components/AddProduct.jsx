@@ -7,8 +7,7 @@ const initialState = {
   image: "",
 };
 function Addproduct() {
-const [inputvalue, setinputvalue] = useState(initialState);
-
+  const [inputvalue, setinputvalue] = useState(initialState);
 
   const handalsubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +19,6 @@ const [inputvalue, setinputvalue] = useState(initialState);
     const res = await fetch("http://localhost:8080/products", requestOptions);
     const data = await res.json();
     console.log(data);
-    
   };
   const hadelChange = (e) => {
     // console.log(e);
